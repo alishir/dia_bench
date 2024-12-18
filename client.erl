@@ -200,4 +200,4 @@ opts(T) ->
 opts(loopback, RP) ->
     opts(?LOOPBACK, RP);
 opts(RA, RP) ->
-    [{raddr, RA}, {rport, RP}, {reuseaddr, true}].
+    [{raddr, RA}, {rport, RP}, {reuseaddr, true}, {recbuf, 65000}, {sndbuf, 65000}].

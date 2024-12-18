@@ -146,9 +146,11 @@ opts({Mod, Addr, default}) ->
 opts({Mod, Addr, Port}) ->
     [
         {transport_module, Mod},
-        {pool_size, 10},
+        {pool_size, 200},
         {transport_config, [
             {reuseaddr, true},
+            {recbuf, 65000},
+            {sndbuf, 65000},
             {sender, true},
             {message_cb, {?MODULE, message, [0]}},
             {ip, Addr},

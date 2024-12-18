@@ -125,7 +125,7 @@ handle_request(
     } =
         Caps,
 
-    Answer = maps:merge(
+    _Answer = maps:merge(
         maps:with(['Session-Id'], Request),
         #{
             'Origin-Host' => OH,
